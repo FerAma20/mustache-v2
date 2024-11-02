@@ -11,7 +11,7 @@ export const Gallery = (props) => {
       <div className="section-title">
         <h2>{props.data? props.data.title : "Loading"}</h2>
         <p>    
-          {props.data? props.data.description : "Loading"}
+          {props.data? props.data.description: "Loading"}
         </p>
       </div>
       <div className="row">
