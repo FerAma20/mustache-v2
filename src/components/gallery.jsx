@@ -1,36 +1,36 @@
-import { Image } from "./image";
-import React from "react";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ItemsData from '../assets/galleryData.json'
 
 export const Gallery = (props) => {
   return (
     <div id="portfolio" className="text-center">
-      <div className="container">
-        <div className="section-title">
-          <h2>Gallery</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p>
-        </div>
-        <div className="row">
-          <div className="portfolio-items">
-            {props.data
-              ? props.data.map((d, i) => (
-                  <div
-                    key={`${d.title}-${i}`}
-                    className="col-sm-6 col-md-4 col-lg-4"
-                  >
-                    <Image
-                      title={d.title}
-                      largeImage={d.largeImage}
-                      smallImage={d.smallImage}
-                    />
-                  </div>
-                ))
-              : "Loading..."}
-          </div>
-        </div>
+    <div className="container">
+      <div className="section-title">
+        <h2>{props.data.title}</h2>
+        <p>    
+          {props.data.description}
+        </p>
+      </div>
+      <div className="row">
+      <Box >
+      <ImageList variant="masonry" cols={3} gap={8}>
+        {ItemsData.itemData.map((item) => (
+          <ImageListItem key={item.img}>
+            <img
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              alt={item.title}
+              loading="lazy"
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
+    </Box>
       </div>
     </div>
+  </div>   
   );
-};
+}
