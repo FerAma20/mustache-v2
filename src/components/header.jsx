@@ -1,6 +1,9 @@
 import React from "react";
+import { getContactUsAction } from "../util/configuration";
+import { useTranslation } from 'react-i18next';
 
 export const Header = (props) => {
+  const { t } = useTranslation();
   return (
     <header id="header">
       <div className="intro">
@@ -14,10 +17,10 @@ export const Header = (props) => {
                 </h1>
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
                 <a
-                  href={props.data ? props.data.buttonAction: "Unknown"}
+                  href={getContactUsAction}
                   className="btn btn-custom btn-lg page-scroll"
                 >
-                  {props.data ? props.data.buttonName : "Loading"}
+                  {t('contactUsButtonText')}
                 </a>
               </div>
             </div>

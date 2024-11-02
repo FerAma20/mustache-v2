@@ -9,8 +9,10 @@
     "@emotion/styled": "latest",
     "@mui/material": "latest",
     "emailjs-com": "^2.6.4",
+    "i18next": "^23.16.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-i18next": "^15.1.0",
     "react-scripts": "^5.0.1",
     "smooth-scroll": "^16.1.3"
   },
