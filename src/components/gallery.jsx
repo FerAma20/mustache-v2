@@ -4,7 +4,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ItemsData from '../assets/galleryData.json'
 
-export const Gallery=(props)=> {
+export const Gallery = (props) => {
   return (
     <div id="portfolio" className="text-center">
     <div className="container">
