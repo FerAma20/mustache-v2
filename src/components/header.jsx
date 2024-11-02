@@ -1,5 +1,5 @@
 import React from "react";
-
+import { getContactUsAction } from "../util/configuration";
 export const Header = (props) => {
   return (
     <header id="header">
@@ -14,10 +14,14 @@ export const Header = (props) => {
                 </h1>
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
                 <a
-                  href={props.data ? props.data.buttonAction: "Unknown"}
+                  href={getContactUsAction}
                   className="btn btn-custom btn-lg page-scroll"
                 >
-                  {props.data ? props.data.buttonName : "Loading"}
+                  {console.log(getContactUsAction)}
+                  {
+                    
+                  props.data ? props.data.buttonName : "Loading"
+                  }
                 </a>
               </div>
             </div>
