@@ -9,9 +9,9 @@ export const Gallery = (props) => {
     <div id="portfolio" className="text-center">
     <div className="container">
       <div className="section-title">
-        <h2>{props.data.title}</h2>
+        <h2>{props.data? props.data.title : "Loading"}</h2>
         <p>    
-          {props.data.description}
+          {props.data? props.data.description : "Loading"}
         </p>
       </div>
       <div className="row">
