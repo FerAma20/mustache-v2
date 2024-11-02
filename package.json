@@ -8,6 +8,7 @@
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@mui/material": "latest",
+    "@mui/icons-material": "latest",
     "emailjs-com": "^2.6.4",
     "i18next": "^23.16.4",
     "react": "^17.0.1",

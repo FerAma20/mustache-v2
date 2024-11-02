@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import ItemsData from '../assets/galleryData.json'
+import ModalProduct from './ModalProduct'
 
 export const Gallery = (props) => {
   return (
@@ -18,14 +18,8 @@ export const Gallery = (props) => {
       <Box >
       <ImageList variant="masonry" cols={3} gap={8}>
         {ItemsData.itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
+          <ModalProduct data={item}></ModalProduct>
+         
         ))}
       </ImageList>
     </Box>
