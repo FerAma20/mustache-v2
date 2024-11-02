@@ -17,11 +17,7 @@ export const Header = (props) => {
                   href={getContactUsAction}
                   className="btn btn-custom btn-lg page-scroll"
                 >
-                  {console.log(getContactUsAction)}
-                  {
-                    
-                  props.data ? props.data.buttonName : "Loading"
-                  }
+                  {props.data ? props.data.buttonName : "Loading"}
                 </a>
               </div>
             </div>
