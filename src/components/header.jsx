@@ -1,6 +1,7 @@
 import React from "react";
 import { getContactUsAction } from "../util/configuration";
 import { useTranslation } from 'react-i18next';
+import Button from '@mui/material/Button';
 
 export const Header = (props) => {
   const { t } = useTranslation();
@@ -16,12 +17,8 @@ export const Header = (props) => {
                   <span></span>
                 </h1>
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
-                <a
-                  href={getContactUsAction}
-                  className="btn btn-custom btn-lg page-scroll"
-                >
-                  {t('contactUsButtonText')}
-                </a>
+                <Button href={getContactUsAction}>{t('contactUsButtonText')}</Button>
+                  
               </div>
             </div>
           </div>
