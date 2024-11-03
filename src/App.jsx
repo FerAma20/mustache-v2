@@ -7,6 +7,8 @@ import { Testimonials } from "./components/testimonials";
 import { Team } from "./components/Team";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './material/theme';
 import "./App.css";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -21,14 +23,16 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <Navigation />
-      <Header data={landingPageData.Header} />
-      <About data={landingPageData.About} />
-      <Gallery data={landingPageData.Gallery} />
-      <Testimonials data={landingPageData.Testimonials} />
-      <Team data={landingPageData.Team} />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Navigation />
+        <Header data={landingPageData.Header} />
+        <About data={landingPageData.About} />
+        <Gallery data={landingPageData.Gallery} />
+        <Testimonials data={landingPageData.Testimonials} />
+        <Team data={landingPageData.Team} />
+      </div>
+    </ThemeProvider>
   );
 };
 

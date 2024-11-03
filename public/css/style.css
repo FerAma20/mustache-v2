@@ -623,11 +623,6 @@ label {
 
 
 .glow-text-dark {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  margin: 0 0 20px;
-  font-weight: 800;
-  font-size: 36px;
   color: #fff; 
   position: relative;
   overflow: hidden;
@@ -646,11 +641,6 @@ label {
 }
 
 .glow-text {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  margin: 0 0 20px;
-  font-weight: 800;
-  font-size: 36px;
   color: rgb(0, 0, 0); 
   position: relative;
   overflow: hidden;
