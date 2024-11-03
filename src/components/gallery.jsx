@@ -9,7 +9,7 @@ export const Gallery = (props) => {
     <div id="portfolio" className="text-center">
     <div className="container">
       <div className="section-title">
-        <h2>{props.data? props.data.title : "Loading"}</h2>
+        <h2 className="glow-text-dark">{props.data? props.data.title : "Loading"}</h2>
         <p>    
           {props.data? props.data.description: "Loading"}
         </p>
