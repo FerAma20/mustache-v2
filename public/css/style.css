@@ -8,11 +8,12 @@
   --highlizght-color: #1e7a46;
   --section-gradient-start: #db0d0d;
   --section-gradient-end: #ff0000;
+  --main-font: "Open Sans", sans-serif;
 }
 
 body,
 html {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--main-font);
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   color: var(--text-color-light);
@@ -534,7 +535,7 @@ header .intro-text {
 label {
   font-size: 12px;
   font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--main-font);
   float: left;
 }
 #contact .form-control {
