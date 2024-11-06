@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
-import ItemsData from '../assets/galleryData.json'
-import ModalProduct from './ModalProduct'
+import ItemsData from '../assets/galleryData.json';
+import ModalProduct from './ModalProduct';
+import Grid from '@mui/material/Grid2';
 
 export const Gallery = (props) => {
   return (
@@ -15,14 +15,17 @@ export const Gallery = (props) => {
         </p>
       </div>
       <div className="row">
-      <Box >
-      <ImageList variant="masonry" cols={3} gap={8}>
+      <Grid container >
+  <Grid size={{ xs: 12, md: 12 }}>
+  <ImageList variant="masonry"  cols={3} gap={8}>
         {ItemsData.itemData.map((item) => (
           <ModalProduct data={item}></ModalProduct>
          
         ))}
       </ImageList>
-    </Box>
+  </Grid>
+  </Grid>
+     
       </div>
     </div>
   </div>   
