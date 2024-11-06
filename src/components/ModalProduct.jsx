@@ -21,7 +21,7 @@ export const FullScreenDialog = (props) => {
   const handleClose = () => {
     setOpen(false);
   };
-console.log(currentTypeModal)
+
   return (
     <>
       <ImageListItem key={props.data ? props.data.img : ''} onClick={handleClickOpen}>
