@@ -4,85 +4,83 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
 import ImageListItem from '@mui/material/ImageListItem';
-import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid2';
 import { getContactUsAction } from "../util/configuration";
 import { useTranslation } from 'react-i18next';
-import { typeModal } from '../util/configuration'
+import { typeModal } from '../util/configuration';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
 
 export const FullScreenDialog = (props) => {
   const [open, setOpen] = React.useState(false);
-  const [currentTypeModal, setCurrentTypeModal] = React.useState(typeModal[props?.data.type]);
+  const [currentTypeModal] = React.useState(typeModal[props?.data.type]);
   const { t } = useTranslation();
   const handleClickOpen = () => {
     setOpen(true);
   };
-
   const handleClose = () => {
     setOpen(false);
   };
-
   return (
     <>
-      <ImageListItem key={props.data ? props.data.img : ''} onClick={handleClickOpen}>
+      <ImageListItem key={props.data ? props.data.img : ''} onClick={handleClickOpen} >
         <img
-          srcSet={`${props.data ? props.data.img : ''}?w=${currentTypeModal.small.width}&fit=crop&auto=format&dpr=2 2x`}
-          src={`${props.data ? props.data.img : ''}?w=${currentTypeModal.small.width}&fit=crop&auto=format`}
+          className='img_gallery'
+          srcSet={`${props.data ? props.data.img : ''}?w=${currentTypeModal.large.width}&fit=crop&auto=format&dpr=2 2x`}
+          src={`${props.data ? props.data.img : ''}?w=${currentTypeModal.large.width}&fit=crop&auto=format`}
           alt={props.data ? props.data.title : ''}
           loading="lazy"
         />
       </ImageListItem>
       <Dialog
-        maxWidth={'md'}
+        className='modal_container_general'
+        maxWidth={props?.data.type === 'HORIZONTAL' ? 'md' : 'lg'}
         open={open}
         onClose={handleClose}
       >
         <IconButton
+          className='icon_button_close'
           aria-label="close"
           onClick={handleClose}
           sx={(theme) => ({
             position: 'absolute',
             right: 8,
             top: 8,
-            color: theme.palette.grey[500],
+            color: theme.palette.grey[props?.data.type === 'HORIZONTAL' ? 900 : 100],
           })}
         >
           <CloseIcon />
         </IconButton>
-
-        <Container >
-          <br />
-          <br />
-          <Grid container spacing={2} justifyContent={'center'}>
-            <Grid size={props?.data.type === 'HORIZONTAL'? { xs: 12, md: 9, sm: 10 } : { sm: 6, xs: 9, md: 6} } >
-              <img
-                srcSet={`${props.data ? props.data.img : ''}`}
-                src={`${props.data ? props.data.img : ''}`}
-                alt={props.data ? t(props.data.name + '.title') : ''}
-                loading="lazy"
-                style={{maxWidth: 100 + '%', maxHeight: 550 + 'px'}}
-                
+        <Grid container spacing={2} justifyContent={'center'}>
+          <Grid size={props?.data.type === 'HORIZONTAL' ? { xs: 12, md: 12, sm: 12 } : { sm: 7, xs: 12, md: 6 }} >
+            <Card className='imagen-container'>
+              <CardMedia
+                component="img"
+                height={currentTypeModal ? currentTypeModal.large.heigth : '478'}
+                image={`${props.data ? props.data.img : ''}`}
+                alt="green iguana"
               />
-            </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Typography sx={{ ml: 2, flex: 1 }} variant="h1" component="div">
-                {`${props.data ? t(props.data.name + '.title') : ''}`}
-              </Typography>
-              <Typography sx={{ ml: 2, flex: 1 }} variant="p" component="div">
-                {`${props.data ? t(props.data.name + '.description') : ''}`}
-              </Typography>
-              <br />
-              <a
-                href={getContactUsAction}
-                className="btn btn-custom btn-lg page-scroll"
-              >
-                {t('contactUsDeliveryButtonText')}
-              </a>
-            </Grid>
+              <h4 className='modal_text_card_image'>#CaféMustache</h4>
+            </Card>
+
           </Grid>
-          <br />
-          <br />
-        </Container>
+          <Grid size={props?.data.type === 'HORIZONTAL' ? { xs: 12, md: 12, sm: 12 } : { sm: 5, xs: 12, md: 6 }}>
+            <div className='div_container_modal_description'>
+              <div className='modal_container_title_descripcion'>
+                <Typography sx={{ ml: 2, flex: 1 }} whiteSpace={"wrap"} textAlign={"center"} variant="h2" component="div">
+                  {`${props.data ? t(props.data.name + '.title') : ''}`}
+                </Typography>
+                <Typography sx={{ ml: 2, flex: 1 }} whiteSpace={"wrap"} textAlign={"center"} variant="p">
+                  {`${props.data ? t(props.data.name + '.description') : ''}`}
+                </Typography>
+                <div className='div-container-btnModal'>
+                  <Button href={getContactUsAction}>{t('contactUsDeliveryButtonText')}</Button>
+                </div>
+              </div>
+            </div>
+          </Grid>
+        </Grid>
       </Dialog>
     </>
   );
