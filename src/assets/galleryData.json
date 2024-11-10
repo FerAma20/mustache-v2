@@ -3,12 +3,28 @@
         {
           "img": "https://images.unsplash.com/photo-1549388604-817d15aa0110",
           "name": "product1",
-          "type": "VERTICAL"
+          "type": "VERTICAL",
+          "labels":[
+            {
+            "text":"Bebidas",
+            "color":"#540C06"
+            },
+            {
+              "text":"Café",
+              "color":"#540C06"
+              }
+          ]
         },
         {
           "img": "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
           "name": "product2",
-          "type": "SQUARE"
+          "type": "SQUARE",
+          "labels":[
+            {
+            "text":"Donas",
+            "color":"#348380"
+            }
+          ]
         },
         {
           "img": "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
@@ -28,7 +44,13 @@
         {
           "img": "https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62",
           "name": "product7",
-          "type": "HORIZONTAL"
+          "type": "HORIZONTAL",
+          "labels":[
+            {
+            "text":"Cheesecake",
+            "color":"#E49924"
+            }
+          ]
         }
       ]
 }

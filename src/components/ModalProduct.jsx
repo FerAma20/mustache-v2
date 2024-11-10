@@ -13,6 +13,7 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 
 export const FullScreenDialog = (props) => {
+  console.log(props.data.labels)
   const [open, setOpen] = React.useState(false);
   const [currentTypeModal] = React.useState(typeModal[props?.data.type]);
   const { t } = useTranslation();
@@ -25,13 +26,18 @@ export const FullScreenDialog = (props) => {
   return (
     <>
       <ImageListItem key={props.data ? props.data.img : ''} onClick={handleClickOpen} >
-        <img
+        <img className='img_gallery'
           src={`${props.data ? props.data.img : ''}?w=${currentTypeModal.large.width}&fit=crop&auto=format`}
           alt={props.data ? props.data.title : ''}
           loading="lazy"
-          
         />
-         <label className='modal_label_card_image'>Bebida</label>
+        <div className='labels_container_gallery'>
+        {
+          props.data ? props.data.labels?.map(item=>{
+           return <label className='modal_label_card_image' style={{backgroundColor:item.color}}>{item.text}</label>
+          }) : <></>
+        }
+        </div>
       </ImageListItem>
       <Dialog
         className='modal_container_general'
