@@ -24,15 +24,14 @@ export const FullScreenDialog = (props) => {
   };
   return (
     <>
-      <ImageListItem className='imagen-container' key={props.data ? props.data.img : ''} onClick={handleClickOpen} >
+      <ImageListItem key={props.data ? props.data.img : ''} onClick={handleClickOpen} >
         <img
-          className='img_gallery'
           src={`${props.data ? props.data.img : ''}?w=${currentTypeModal.large.width}&fit=crop&auto=format`}
           alt={props.data ? props.data.title : ''}
           loading="lazy"
           
         />
-         <h4 className='modal_text_card_image'>#El favorito de nuestros clientes</h4>
+         <label className='modal_label_card_image'>Bebida</label>
       </ImageListItem>
       <Dialog
         className='modal_container_general'

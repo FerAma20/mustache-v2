@@ -85,5 +85,15 @@ code {
   z-index: 1000;
 }
 
+.modal_label_card_image{
+  position: absolute;
+  left: 25px;
+  bottom: 15px;
+  z-index: 1000;
+  background: red;
+  border-radius: 8px;
+  padding: 5px 16px 5px 16px;
+}
+
 /*Finaliza Modal Galeria Productos*/
 /*------------------------------------------*/
