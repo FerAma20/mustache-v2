@@ -59,9 +59,10 @@ export const FullScreenDialog = (props) => {
           <CloseIcon />
         </IconButton>
         <Grid container spacing={2} justifyContent={'center'}>
-          <Grid size={props?.data.type === 'HORIZONTAL' ? { xs: 12, md: 12, sm: 12 } : { sm: 7, xs: 12, md: 6 }} >
+          <Grid size={props?.data.type === 'HORIZONTAL' ? { xs: 12, md: 12, sm: 12 } : { sm: 6, xs: 12, md: 6 }} >
             <Card className='imagen-container'>
               <CardMedia
+                className='card_img_gallery_modal'
                 component="img"
                 height={currentTypeModal ? currentTypeModal.large.heigth : '478'}
                 image={`${props.data ? props.data.img : ''}`}
@@ -71,10 +72,10 @@ export const FullScreenDialog = (props) => {
             </Card>
 
           </Grid>
-          <Grid size={props?.data.type === 'HORIZONTAL' ? { xs: 12, md: 12, sm: 12 } : { sm: 5, xs: 12, md: 6 }}>
+          <Grid size={props?.data.type === 'HORIZONTAL' ? { xs: 12, md: 12, sm: 12 } : { sm: 6, xs: 12, md: 6 }}>
             <div className='div_container_modal_description'>
               <div className='modal_container_title_descripcion'>
-                <Typography sx={{ ml: 2, flex: 1 }} whiteSpace={"wrap"} textAlign={"center"} variant="h2" component="div">
+                <Typography sx={{ ml: 0, flex: 1 }} fontSize={35} whiteSpace={"wrap"} textAlign={"center"} variant="h2" component="div">
                   {`${props.data ? t(props.data.name + '.title') : ''}`}
                 </Typography>
                 <Typography sx={{ ml: 2, flex: 1 }} whiteSpace={"wrap"} textAlign={"center"} variant="p">
