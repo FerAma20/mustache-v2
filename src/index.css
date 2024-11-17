@@ -12,6 +12,33 @@ code {
     monospace;
 }
 
+
+.container_logo_name{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.speed_dial_whatsapp button{
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #25D366;
+}
+
+.speed_dial_whatsapp button:hover{
+  background-color: #25D366;
+}
+
+.speed_dial_whatsapp button svg{
+  width: 2em;
+  height: 2em;
+}
+
+@media (min-width: 768px) {
+  .speed_dial_whatsapp button{
+    display: none;
+  }
+}
 /*------------------------------------------*/
 /*Inicia Modal Galeria Productos*/
 
@@ -77,6 +104,12 @@ code {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 100%);
   pointer-events: none;
 }
+.labels_container_gallery{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
 .modal_text_card_image{
   position: absolute;
@@ -85,5 +118,18 @@ code {
   z-index: 1000;
 }
 
+.modal_label_card_image{
+  position: relative;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-top: auto;
+  border-radius: 6px;
+  padding: 5px 16px 5px 16px;
+  cursor: pointer;
+}
+
+.modal_label_card_image:hover{
+  opacity: 0.9;
+}
 /*Finaliza Modal Galeria Productos*/
 /*------------------------------------------*/
