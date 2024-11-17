@@ -4,7 +4,7 @@
   --text-color-light: #fff;
   --button-color: #e52c2c;
   --button-hover-color: #d82323;
-  --link-color: #608dfd;
+  --link-color: #25D366;
   --highlizght-color: #1e7a46;
   --section-gradient-start: #db0d0d;
   --section-gradient-end: #ff0000;
@@ -86,7 +86,7 @@ hr {
 }
 /* Navigation */
 #menu {
-  padding: 15px;
+  padding: 10px;
   transition: all 0.8s;
 }
 #menu.navbar-default {
@@ -319,7 +319,7 @@ header .intro-text {
   width: 400px;
   height: 400px;
   margin-top: 10px;
-  background: var(--text-color-light);
+  background: #540C06;
   border-right: 0;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
   clip-path: circle(50% at center); 

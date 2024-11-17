@@ -1,28 +1,28 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
+    "title": "Bienvenido a Café Mustache",
+    "paragraph": "El lugar donde los sabores locales se encuentran con la creatividad.",
     "buttonName": "Contactanos",
     "buttonAction": "https://wa.me/<phone-number>?text=Hola%20me%20gustaria%20hacer%20un%20pedido"
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "Ubicados en el corazón de Jutiapa, Guatemala, en Café Mustache nos enorgullece ofrecerte una experiencia única que celebra lo mejor de nuestros productos locales. Imagina disfrutar de una taza de café artesanal acompañado de los más exquisitos postres y donas elaborados con ingredientes frescos y auténticos, provenientes directamente de los productores de nuestra región.",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "Sabor Local en Cada Taza",
+      "Tu Espacio de Productividad",
+      "Donas que Enamoran",
+      "Café para Inspirarte"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Frescura Regional",
+      "Un Refugio Tranquilo",
+      "Lo Mejor, Siempre",
+      "Conecta con el Sabor"
     ]
   },
   "Gallery": {
     "title": "Nuestros Productos",
-    "description": "Descubre nuestra selección de cafés artesanales, tés y deliciosos postres frescos. En nuestra cafetería, cada sorbo y bocado es una experiencia única para disfrutar y compartir.",
+    "description": "Nuestros productos son una verdadera celebración de los sabores locales. Desde nuestras donas artesanales, suaves y deliciosas, hasta los postres caseros que combinan lo mejor de los ingredientes regionales, todo está hecho con pasión y dedicación. Acompáñalos con una taza de café artesanal, preparado con granos seleccionados de nuestra región para brindarte una experiencia única en cada sorbo. En Café Mustache te ofrecemos lo mejor de Jutiapa, con productos frescos, auténticos y llenos de sabor.",
     "images": [
       {
         "title": "Project Title",

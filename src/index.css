@@ -12,6 +12,33 @@ code {
     monospace;
 }
 
+
+.container_logo_name{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.speed_dial_whatsapp button{
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #25D366;
+}
+
+.speed_dial_whatsapp button:hover{
+  background-color: #25D366;
+}
+
+.speed_dial_whatsapp button svg{
+  width: 2em;
+  height: 2em;
+}
+
+@media (min-width: 768px) {
+  .speed_dial_whatsapp button{
+    display: none;
+  }
+}
 /*------------------------------------------*/
 /*Inicia Modal Galeria Productos*/
 

@@ -1,4 +1,5 @@
 import React from "react";
+import logoHeader from '../images/logoHeader.png'
 
 export const Navigation = (props) => {
   return (
@@ -17,9 +18,13 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
+          <div className="container_logo_name">
+          <img src={logoHeader} width={75} href="#page-top"/>
           <a className="navbar-brand page-scroll" href="#page-top">
             Café Mustache
           </a>{" "}
+          </div>
+          
         </div>
 
         <div
@@ -29,18 +34,18 @@ export const Navigation = (props) => {
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#about" className="page-scroll">
-                About
+                Sobre Nosotros
               </a>
             </li>
             <li>
               <a href="#portfolio" className="page-scroll">
-                Gallery
+                Galeria
               </a>
             </li>
         
             <li>
               <a href="#team" className="page-scroll">
-                Team
+                Equipo
               </a>
             </li>
           </ul>
