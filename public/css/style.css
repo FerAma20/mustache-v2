@@ -245,6 +245,27 @@ a:focus,
   font-weight: 800;
   color: var(--section-gradient-end);
 }
+
+/* Media query para pantallas pequeñas (menores a 768px) */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 4rem;  /* Reduce el tamaño en pantallas más pequeñas */
+    white-space: normal; /* Evita que el texto se corte */
+  }
+}
+
+/* Media query para pantallas aún más pequeñas (por ejemplo, móviles) */
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 2.5rem; /* Tamaño pequeño en dispositivos móviles */
+  }
+}
+
+@media (min-width: 768px) {
+  .speed_dial_whatsapp button{
+    display: none;
+  }
+}
 .intro p {
   color: var(--text-color-light);
   font-size: 22px;
@@ -317,7 +338,7 @@ header .intro-text {
 }
 #about img {
   width: 400px;
-  height: 400px;
+  height: auto;
   margin-top: 10px;
   background: #540C06;
   border-right: 0;

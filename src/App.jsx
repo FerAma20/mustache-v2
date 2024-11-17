@@ -28,6 +28,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <SpeedDial
+       
       className="speed_dial_whatsapp"
         ariaLabel="SpeedDial basic example"
         icon={<WhatsAppIcon />}
