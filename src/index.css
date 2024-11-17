@@ -44,11 +44,22 @@ code {
   text-align: center; /* Alineación centrada */
 }
 
+.card_img_gallery_modal{
+  max-height: 720px;
+}
+
 /* Media query para pantallas pequeñas (menores a 768px) */
 @media (max-width: 768px) {
   .header_title_primary {
     font-size: 2.5rem;  /* Reduce el tamaño en pantallas más pequeñas */
     white-space: normal; /* Evita que el texto se corte */
+  }
+
+}
+@media (max-width: 600px) {
+  .card_img_gallery_modal{
+    max-height: 480px;
+    height: 480px;
   }
 }
 
@@ -56,6 +67,11 @@ code {
 @media (max-width: 480px) {
   .header_title_primary {
     font-size: 2rem; /* Tamaño pequeño en dispositivos móviles */
+  }
+
+  .card_img_gallery_modal{
+    max-height: 290px;
+    height: 290px;
   }
 }
 
@@ -89,7 +105,7 @@ code {
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 15px;
+  padding: 5px;
 }
 
 .icon_button_close{
@@ -97,7 +113,7 @@ code {
 }
 
 .modal_container_title_descripcion{
-  padding: 15px;
+  padding: 5px;
 }
 
 .img_gallery{
