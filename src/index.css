@@ -34,6 +34,29 @@ code {
   height: 2em;
 }
 
+
+.header_title_primary {
+  white-space: normal; /* Permite que el texto se divida en varias líneas si es necesario */
+  overflow: visible;  /* Asegura que todo el texto se muestre */
+  word-wrap: break-word; /* Permite que las palabras largas se rompan */
+  text-align: center; /* Alineación centrada */
+}
+
+/* Media query para pantallas pequeñas (menores a 768px) */
+@media (max-width: 768px) {
+  .header_title_primary {
+    font-size: 2.5rem;  /* Reduce el tamaño en pantallas más pequeñas */
+    white-space: normal; /* Evita que el texto se corte */
+  }
+}
+
+/* Media query para pantallas aún más pequeñas (por ejemplo, móviles) */
+@media (max-width: 480px) {
+  .header_title_primary {
+    font-size: 2rem; /* Tamaño pequeño en dispositivos móviles */
+  }
+}
+
 @media (min-width: 768px) {
   .speed_dial_whatsapp button{
     display: none;
